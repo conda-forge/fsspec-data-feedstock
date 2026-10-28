@@ -1,6 +1,6 @@
 context:
   name: fsspec-data
-  version: "0.2.3"
+  version: "0.2.4"
 
 package:
   name: ${{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/f/fsspec-data/fsspec_data-${{ version }}.tar.gz
-  sha256: 07ca6e78b672fd59c36fa41ef3a8d234070439c14cc0ce768763d325963eb439
+  sha256: 0c95111f18f1c72d9ca52ce20db2ebee07926fd4d16e04f4544711c647274ae6
 
 build:
   number: 0
