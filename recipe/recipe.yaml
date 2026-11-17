@@ -41,20 +41,20 @@ requirements:
     - python
     - pip
     - hatchling
-    - hatch-rs >=0.2.1
+    - hatch-rs >=0.6.1
     - if: is_abi3
       then:
         - python-abi3
   run:
     - python
     - fsspec
-    - fsspec-rs >=0.1.2
     - pyarrow
 
 tests:
   - python:
       imports:
         - fsspec_data
+        - fsspec_data.fsspec_data
       pip_check: true
       python_version:
         - ${{ python_min }}.*
