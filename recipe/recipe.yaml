@@ -1,6 +1,6 @@
 context:
   name: fsspec-data
-  version: "0.7.0"
+  version: "0.8.0"
 
 package:
   name: ${{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/f/fsspec-data/fsspec_data-${{ version }}.tar.gz
-  sha256: f601d3fe6b6df9febd107fd751bcab836e177e9c70bd7b9d60eb76e8a15a6dc1
+  sha256: d2190b00adf020c2aa245611c32c0c124c6ecc02491a8514fe2b228d3b179150
 
 build:
   number: 0
@@ -41,20 +41,20 @@ requirements:
     - python
     - pip
     - hatchling
-    - hatch-rs >=0.2.1
+    - hatch-rs >=0.6.1
     - if: is_abi3
       then:
         - python-abi3
   run:
     - python
     - fsspec
-    - fsspec-rs >=0.1.2
     - pyarrow
 
 tests:
   - python:
       imports:
         - fsspec_data
+        - fsspec_data.fsspec_data
       pip_check: true
       python_version:
         - ${{ python_min }}.*
